@@ -168,3 +168,15 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e5e7eb;
+}
+
+.footer a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
