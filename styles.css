@@ -98,7 +98,7 @@ body {
     padding: 2vh 0;
 }
 
-.information-item-container {
+.information-items-box {
     display: flex;
     justify-content: space-between;
     padding: 0 7vw;
@@ -153,6 +153,7 @@ body {
 
 .action-caption {
     max-width: 75%;
+    padding-right: 2vw;
     margin: auto;
 }
 
