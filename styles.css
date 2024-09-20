@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(font-face/Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto/Roboto-LightItalic.ttf);
+    font-weight: light;
+    font-style: italic;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,6 +23,7 @@
 
 body {
     margin: 1vw;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero {
@@ -64,7 +82,7 @@ body {
 button {
     padding: 5px 30px;
     border: none;
-    margin: 5px 0;
+    margin: 7.5px 0;
     background-color: #3882f6;
     color: #f9faf8;
     font-size: 18px;
@@ -83,11 +101,30 @@ button {
 .information-items {
     display: flex;
     justify-content: space-between;
-    padding: 2vh 17.5vw;
+    padding: 0vh 17.5vw;
+    padding-bottom: 6vh;
     list-style: none;
 }
 
 .information-item img {
     width: 100px;
     height: 100px;
+}
+
+.review {
+    background-color: #e5e7eb;
+    padding: 5vh 10vw;
+}
+
+.review-text {
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: light;
+    font-style: italic;
+}
+
+.review-signature {
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
 }
