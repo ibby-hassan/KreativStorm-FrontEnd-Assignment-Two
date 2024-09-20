@@ -22,7 +22,7 @@
 }
 
 body {
-    margin: 1vw;
+    margin: 0.75vh 1.25vw;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -79,7 +79,7 @@ body {
     color: #e5e7eb;
 }
 
-button {
+.welcome-box-item button {
     padding: 5px 30px;
     border: none;
     margin: 7.5px 0;
@@ -127,4 +127,44 @@ button {
     display: flex;
     justify-content: end;
     font-weight: bold;
+}
+
+.action-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3882f6;
+    margin: 5vh 10vw;
+    padding: 3.5vh 10vw;
+    border-radius: 10px;
+}
+
+.action-caption {
+    max-width: 75%;
+    margin: auto;
+}
+
+.action-caption h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9faf8;
+}
+
+.action-caption p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.action-button {
+    padding: 7px 30px;
+    margin: 7.5px 0;
+    background-color: #3882f6;
+    border-width: 3px;
+    border-color: #f9faf8;
+    border-radius: 10px;
+    border-style: solid;
+    color: #f9faf8;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }
