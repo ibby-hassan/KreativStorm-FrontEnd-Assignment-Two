@@ -6,15 +6,13 @@
 
 .hero {
     background-color: #1f2937;
+    padding: 1vh 10vw;
 }
 
 .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    margin-top: -5px;
-    
 }
 
 .nav-logo {
@@ -34,4 +32,38 @@
     font-size: 18px;
     color: #e5e7eb;
     text-decoration: none;
+}
+
+.welcome-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 10vw;
+}
+
+.welcome-box-item {
+    width: 100vw;
+    justify-content: center;
+}
+
+.welcome-box-item h1 {
+    font-size: 48px;
+    font-weight: extra-bold;
+    color: #f9faf8;
+}
+
+.welcome-box-item p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+button {
+    padding: 5px 30px;
+    border: none;
+    margin: 5px 0;
+    background-color: #3882f6;
+    color: #f9faf8;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
 }
