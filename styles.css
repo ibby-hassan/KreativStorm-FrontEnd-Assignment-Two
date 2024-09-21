@@ -58,7 +58,7 @@ body {
 
 .welcome-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 5vh 10vw;
 }
@@ -66,13 +66,6 @@ body {
 .welcome-box-item {
     width: 100vw;
     justify-content: center;
-}
-
-.welcome-box-item img {
-    border-radius: 10px;
-    height: 80%;
-    width: 90%;
-    padding-left: 5vw;
 }
 
 .welcome-box-item h1 {
@@ -102,32 +95,20 @@ body {
     font-weight: extra-bold;
     color: #1f2937;
     text-align: center;
-    padding: 2vw 0;
+    padding: 2vh 0;
 }
 
-.information-items-box {
+.information-items {
     display: flex;
     justify-content: space-between;
-    padding: 0 7vw;
+    padding: 0vh 17.5vw;
     padding-bottom: 6vh;
     list-style: none;
 }
 
-.information-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .information-item img {
-    border-radius: 10px;
-    width: 12vw;
-    height: 12vw;
-}
-
-.information-item p {
-    width: 150px;
-    text-align: center;
+    width: 100px;
+    height: 100px;
 }
 
 .review {
@@ -160,7 +141,6 @@ body {
 
 .action-caption {
     max-width: 75%;
-    padding-right: 2vw;
     margin: auto;
 }
 
@@ -199,4 +179,92 @@ body {
 .footer a {
     color: #e5e7eb;
     text-decoration: none;
+}
+
+.signup-form {
+    margin: 5vh 30vw;
+    padding: 3.5vh 25px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.signup-form label {
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.signup-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3882f6;
+    color: #f9faf8;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup-form button:hover {
+    background-color: #2a69d1;
+}
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.recipe-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9faf8;
+}
+
+.recipe-item h2 {
+    font-size: 20px;
+    color: #1f2937;
+    margin: 10px 0;
+}
+
+.recipe-item p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.recipe-button {
+    padding: 8px 16px;
+    background-color: #3882f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.recipe-button:hover {
+    background-color: #2a69d1;
 }
