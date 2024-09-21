@@ -269,14 +269,12 @@ body {
     background-color: #2a69d1;
 }
 
-
-/* Recipes */
 .recipes-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
     justify-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .recipe-item {
@@ -286,6 +284,7 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 300px;
+    height: fit-content;
     margin: 15px;
     text-align: center;
     border: 1px solid #ccc;
@@ -317,4 +316,10 @@ body {
 
 .recipe-button:hover {
     background-color: #2a69d1;
+}
+
+@media (max-width: 600px){
+    .recipes-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
