@@ -120,6 +120,7 @@ body {
 }
 
 .information-item img {
+    border: 5px solid #3882f6;
     border-radius: 10px;
     width: 12vw;
     height: 12vw;
