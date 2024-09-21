@@ -278,7 +278,7 @@ body {
 .recipe-item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     max-width: 300px;
     margin: 15px;
