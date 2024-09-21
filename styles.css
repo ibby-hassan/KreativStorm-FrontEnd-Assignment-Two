@@ -15,7 +15,14 @@
     font-style: italic;
 }
 
-/* ---------- Future Change: We can make use of CSS variables for a lot of repeated values ---------- */
+:root {
+    --debug-border: 2px solid red;
+}
+
+/* There's a weird bug I can't place, where the size of the header
+on the index page is somehow different from the other pages, even though the code
+looks the exact same. But this display glitch isn't happening when I open the site
+on inspect element, so I've got no idea. -Ibrahim */
 
 * {
     box-sizing: border-box;
@@ -25,6 +32,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero {
@@ -36,9 +46,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: auto;
 }
 
-.nav-logo {
+.nav-logo a {
     font-size: 24px;
     color: #f9faf8;
     text-decoration: none;
@@ -98,7 +109,7 @@ body {
     border-radius: 5px;
 }
 
-.information-title {
+.information h2 {
     font-size: 36px;
     font-weight: extra-bold;
     color: #1f2937;
@@ -106,7 +117,7 @@ body {
     padding: 2vw 0;
 }
 
-.information-items-box {
+.information-items-container {
     display: flex;
     justify-content: space-between;
     padding: 0 7vw;
@@ -127,7 +138,7 @@ body {
     height: 12vw;
 }
 
-.information-item p {
+.information-item figcaption {
     width: 150px;
     text-align: center;
 }
@@ -166,7 +177,7 @@ body {
     margin: auto;
 }
 
-.action-caption h1 {
+.action-caption h3 {
     font-size: 24px;
     font-weight: bold;
     color: #f9faf8;
@@ -192,17 +203,32 @@ body {
 }
 
 .footer {
+    margin-top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: auto;
     color: #e5e7eb;
 }
 
-.footer a {
+.back-to-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 5px;
     color: #e5e7eb;
     text-decoration: none;
 }
 
+.back-to-top img {
+    margin-top: 2%;
+    height: 75%;
+    width: 75%;
+}
+
+
+/* Login */
 .signup-form {
     margin: 5vh 30vw;
     padding: 3.5vh 25px;
@@ -243,6 +269,8 @@ body {
     background-color: #2a69d1;
 }
 
+
+/* Recipes */
 .recipes-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

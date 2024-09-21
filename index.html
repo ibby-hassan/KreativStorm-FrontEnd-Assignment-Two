@@ -9,12 +9,14 @@
     <body>
         <header>
             <nav class="hero nav-bar">
-                <a href="index.html" class="nav-logo">Recipedia</a>
-                <ul class="nav-links">  <!-- These should be pushed into <menu> elements -->
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                </ul>
+                <picture class="nav-logo">
+                    <a href="index.html">Recipedia</a>
+                </picture>
+                <menu class="nav-links">
+                    <a href="#">About Us</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="signup.html">Sign Up</a>
+                </menu>
             </nav>
         </header>
         <main>
@@ -27,57 +29,64 @@
                     </p>
                     <button onclick="location.href='signup.html'">Sign Up</button>
                 </div>
-                <div class="welcome-box-item">
+                <picture class="welcome-box-item">
                     <img src="images/food.jpg" alt="Banner image of a banquet">
-                </div>  
+                </picture>  
             </section>
             <section class="information">
-                <h1 class="information-title">Featured Foodstuffs</h1>
-                <ul class="information-items-box">  <!-- These should be pushed into <figure> elements -->
-                    <li class="information-item">
+                <h2>Featured Foodstuffs</h2>
+                <div class="information-items-container">
+                    <figure class="information-item">
                         <a href="#"><img src="images/food1.jpg" alt="Image of shawarma"></a>   
-                        <p>Shawarma</p>
-                    </li>
-                    <li class="information-item">
+                        <figcaption>Shawarma</figcaption>
+                    </figure>
+                    <figure class="information-item">
                         <a href="#"><img src="images/food2.jpg" alt="Image of sushi"></a>
-                        <p>Sushi</p>
-                    </li>
-                    <li class="information-item">
+                        <figcaption>Sushi</figcaption>
+                    </figure>
+                    <figure class="information-item">
                         <a href="#"><img src="images/food3.jpg" alt="Image of a burger"></a>
-                        <p>Hamburger</p>
-                    </li>
-                    <li class="information-item">
+                        <figcaption>Hamburger</figcaption>
+                    </figure>
+                    <figure class="information-item">
                         <a href="#"><img src="images/food4.jpg" alt="Image of a butter chicken dish"></a>
-                        <p>Butter Chicken</p>
-                    </li>
-                </ul>
+                        <figcaption>Butter Chicken</figcaption>
+                    </figure>
+                </div>
             </section>
             <section class="review">
-                <p class="review-text">
-                   This is an outstanding website! 
-                   I found the recipe for my favorite dish and it was so easy to follow! 
-                   I can't wait to try more recipes!
-                </p>
+                <figure>
+                    <blockquote class="review-text">
+                        This is an outstanding website! 
+                        I found the recipe for my favorite dish and it was so easy to follow! 
+                        I can't wait to try more recipes!
+                    </blockquote>
+                </figure>
                 <aside>
-                    <p class="review-signature">
+                    <figcaption class="review-signature">
                         - Branko, satisfied customer.
-                    </p>
+                    </figcaption>
                 </aside>
             </section>
             <section class="action-box">
-                <div class="action-caption">
-                    <h1>Still hungry?</h1>
+                <figure class="action-caption">
+                    <h3>Still hungry?</h3>
                     <p> 
                         Sign up to our monthly newsletter for updates on
                         trending dishes and easy recipes!
                     </p>
-                </div>
+                </figure>
                 <button class="action-button">Sign Up</button>
             </section>
         </main>
         <footer class="hero footer">
             <p>&copy; 2024 Recipedia.</p>
-            <a href="#top">Return to top</a>
+            <figure class="back-to-top">
+                <a href="#top">
+                    <img src="images/up-arrow-icon.png" alt="back to top">
+                    <figcaption>Return</figcaption>
+                </a>
+            </figure>
         </footer>
     </body>
 </html>
