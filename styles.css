@@ -19,20 +19,15 @@
     --debug-border: 2px solid red;
 }
 
-/* There's a weird bug I can't place, where the size of the header
-on the index page is somehow different from the other pages, even though the code
-looks the exact same. But this display glitch isn't happening when I open the site
-on inspect element, so I've got no idea. -Ibrahim */
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
 }
@@ -48,20 +43,17 @@ body {
     align-items: center;
     padding: auto;
 }
-
 .nav-logo a {
     font-size: 24px;
     color: #f9faf8;
     text-decoration: none;
 }
-
 .nav-links {
     display: flex;
     list-style: none;
     align-items: center;
     gap: 7vw;
 }
-
 .nav-links a {
     font-size: 18px;
     color: #e5e7eb;
@@ -74,31 +66,25 @@ body {
     align-items: center;
     padding: 5vh 10vw;
 }
-
-.welcome-box-item {
-    width: 100vw;
-    justify-content: center;
+.welcome-box-image #vertical-image {
+    display: none;
 }
-
-.welcome-box-item img {
+.welcome-box-image img #horizontal-image{
     border-radius: 10px;
-    height: 80%;
-    width: 90%;
+    max-height: 70%;
+    max-width: 80%;
     padding-left: 5vw;
 }
-
-.welcome-box-item h1 {
+.welcome-box-text h1 {
     font-size: 48px;
     font-weight: extra-bold;
     color: #f9faf8;
 }
-
-.welcome-box-item p {
+.welcome-box-text p {
     font-size: 18px;
     color: #e5e7eb;
 }
-
-.welcome-box-item button {
+.welcome-box-text button {
     padding: 5px 30px;
     border: none;
     margin: 7.5px 0;
@@ -116,28 +102,27 @@ body {
     text-align: center;
     padding: 2vw 0;
 }
-
 .information-items-container {
     display: flex;
     justify-content: space-between;
     padding: 0 7vw;
     padding-bottom: 6vh;
-    list-style: none;
+    flex-flow: row wrap;
+    row-gap: 2vh;
 }
-
 .information-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .information-item img {
     border: 5px solid #3882f6;
     border-radius: 10px;
     width: 12vw;
+    min-width: 125px;
     height: 12vw;
+    min-height: 125px;
 }
-
 .information-item figcaption {
     width: 150px;
     text-align: center;
@@ -147,14 +132,12 @@ body {
     background-color: #e5e7eb;
     padding: 5vh 10vw;
 }
-
 .review-text {
     color: #1f2937;
     font-size: 36px;
     font-weight: light;
     font-style: italic;
 }
-
 .review-signature {
     display: flex;
     justify-content: end;
@@ -170,24 +153,20 @@ body {
     padding: 3.5vh 10vw;
     border-radius: 10px;
 }
-
 .action-caption {
     max-width: 75%;
     padding-right: 2vw;
     margin: auto;
 }
-
 .action-caption h3 {
     font-size: 24px;
     font-weight: bold;
     color: #f9faf8;
 }
-
 .action-caption p {
     font-size: 18px;
     color: #e5e7eb;
 }
-
 .action-button {
     padding: 7px 30px;
     margin: 7.5px 0;
@@ -210,7 +189,6 @@ body {
     padding: auto;
     color: #e5e7eb;
 }
-
 .back-to-top a {
     display: flex;
     justify-content: center;
@@ -220,7 +198,6 @@ body {
     color: #e5e7eb;
     text-decoration: none;
 }
-
 .back-to-top img {
     margin-top: 2%;
     height: 75%;
@@ -233,25 +210,21 @@ body {
     background-color: #e5e7eb;
     border-radius: 10px;
 }
-
 .signup-form form {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
 }
-
 .signup-form label {
     font-size: 18px;
     color: #1f2937;
 }
-
 .signup-form input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
-
 .signup-form button {
     padding: 10px 20px;
     border: none;
@@ -262,7 +235,6 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
-
 .signup-form button:hover {
     background-color: #2a69d1;
 }
@@ -274,7 +246,6 @@ body {
     justify-items: center;
     padding: 15px;
 }
-
 .recipe-item {
     display: flex;
     align-items: center;
@@ -288,13 +259,11 @@ body {
     padding: 20px;
     background-color: #f9faf8;
 }
-
 .recipe-item h2 {
     font-size: 20px;
     color: #1f2937;
     margin: 10px 0;
 }
-
 .recipe-item p {
     font-size: 14px;
     color: #4b5563;
@@ -309,16 +278,84 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .recipe-button:hover {
     background-color: #2a69d1;
 }
 
-@media (max-width: 600px){
+
+/* Media Queries */
+@media screen and (max-width: 600px){
+
+    .nav-logo a {
+        font-size: 16px;
+    }
+    .nav-links {
+        gap: 3vw;
+    }
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .welcome-box {
+        padding: 5vh 7vw;
+    }
+    .welcome-box-text {
+        padding: 0;
+        max-width: 60%;
+    }
+    .welcome-box-text h1 {
+        font-size: 36px;
+    }
+    .welcome-box-text p {
+        font-size: 16px;
+    }
+    .welcome-box-text button {
+        font-size: 12px;
+    }
+    .welcome-box #vertical-image {
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        padding-left: 3vw;
+        border-radius: 10px;
+    }
+    .welcome-box-image #horizontal-image {
+        display: none;
+    }
+
+    .review-text {
+        font-size: 24px;
+    }
+    .review-signature {
+        font-size: 14px;
+    }
+
+    .action-box {
+        flex-direction: column;
+        padding: 3.5vh 7vw;
+    }
+    .action-box h3 {
+        font-size: 20px;
+    }
+    .action-box p {
+        font-size: 14px;
+    }
+    .action-button {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+    .footer img {
+        height: 25%;
+        width: 25%;
+        padding-bottom: 0.5vh;
+    }
+
     .recipes-container {
         grid-template-columns: 1fr 1fr;
     }
-
     .recipe-item {
         width: 100%;
         height: 100%;
